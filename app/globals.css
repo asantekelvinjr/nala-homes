@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-primary: #1e90ff;
+  --color-off-white: #f9f8fa;
+  --color-red-accent: #fd0000;
+  --color-text: #4a4a4a;
+  --color-alt-bg: #f3f3f3;
+  --color-footer-bg: #1a273a;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /*  --color-accent: #D15EFF;
+  --color-text: #4A4A4A;
+  --color-muted: #707070;
+  --color-black-bg: #111111;
+  --color-button-bg:#E5E9EB; */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* Example: Use Oxanium for headers */
+.title {
+  font-family: var(--font-oxanium), sans-serif;
+}
+
+.quote {
+  font-family: var(--font-inika), serif;
 }

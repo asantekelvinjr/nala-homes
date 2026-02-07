@@ -1,0 +1,58 @@
+import React from 'react'
+import { FaArrowRight, FaSearch } from 'react-icons/fa'
+
+const Hero = () => {
+  return (
+    <section 
+      className="
+        relative 
+        h-screen w-screen 
+        bg-[url('/images/hero-img.jpg')] 
+        bg-cover bg-center bg-no-repeat flex 
+      "
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Content */}
+      <div className='flex flex-col gap-2  justify-center relative z-10 mx-auto'>
+        {/* Heading */}
+        <div >
+          <h1 className='text-white  text-[52px] max-w-[690px] font-semibold'> Find Your Dream Property 
+in Minutes</h1>
+        </div>
+
+        <div className='mt-3'>
+          <p className='text-[20px] text-white max-w-[680px]'>Explore a wide range of homes, apartments, and lands tailored 
+to your lifestyle.</p>
+        </div>
+
+        <div className="relative w-full max-w-md mt-5">
+          <FaSearch
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+
+          />
+          <input type="text"  placeholder='Search By Location ...' className='bg-white text-[#928D8D] border py-4 pl-14 pr-30 rounded-full'/>
+
+          <button
+    className="
+      absolute left-83 top-1/2 -translate-y-1/2
+      bg-primary text-white 
+      w-10 h-10 
+      rounded-full 
+      flex items-center justify-center
+      hover:bg-blue-600
+    "
+  >
+    <FaArrowRight className="w-5 h-5" />
+  </button>
+
+        </div>
+
+      </div>
+      
+    </section>
+  )
+}
+
+export default Hero

@@ -9,16 +9,23 @@ const MobileNavbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black lg:hidden">
-      {/* Top bar */}
-      <div className="w-[90%] mx-auto flex justify-between items-center py-4">
-        <div className="flex items-center gap-3 text-white text-xl">
-          <Image src="/images/nala logo.png" width={30} height={30} alt="logo" />
+    <nav className="fixed top-0 left-0 w-full z-50 lg:hidden">
+      {/* Top Bar */}
+      <div className=" backdrop-blur-md bg-white/10  border-white/20
+                      shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+        <div className="w-[90%] mx-auto flex justify-between items-center py-4
+                      ">
+        <div className="flex items-center gap-3 text-white text-xl font-semibold">
+          <Image src="/images/nala logo.png" width={30} height={30} alt="Nala Homes logo" />
           <span>Nala Homes</span>
         </div>
 
         {/* Hamburger */}
-        <button onClick={() => setOpen(!open)} className="text-white">
+        <button
+          onClick={() => setOpen(!open)}
+          className="text-white focus:outline-none"
+          aria-label="Toggle menu"
+        >
           {open ? (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -30,12 +37,21 @@ const MobileNavbar = () => {
           )}
         </button>
       </div>
+      </div>
 
-      {/* Side menu */}
+      {/* Overlay */}
       <div
-        className={`fixed top-0 left-0 h-full w-3/5 bg-black text-white transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40
+          transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        onClick={() => setOpen(false)}
+      />
+
+      {/* Side Drawer */}
+      <div
+        className={`fixed top-0 left-0 h-full w-3/5 bg-[#0A0A0A] text-white z-50
+          border-r border-white/20 shadow-xl
+          transform transition-transform duration-300 ease-in-out
+          ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="mt-24 px-6 space-y-6">
           {sections.map((item) => (
@@ -50,14 +66,6 @@ const MobileNavbar = () => {
           ))}
         </div>
       </div>
-
-      {/* Overlay */}
-      {open && (
-        <div
-          className="fixed inset-0 bg-black/50 z-[-1]"
-          onClick={() => setOpen(false)}
-        />
-      )}
     </nav>
   );
 };

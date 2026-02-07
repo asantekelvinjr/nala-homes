@@ -43,22 +43,24 @@ const Properties = () => {
 
         {/* Type Toggle */}
 
-        <div className="flex items-center justify-center mt-10 gap-4">
-          {propertyStatus.map((status) => (
-            <button
-              key={status.key}
-              onClick={() => setActiveStatus(status.key)}
-              className={`w-fit px-6 py-3 text-lg text-center transition hover:cursor-pointer 
-        ${
-          activeStatus === status.key
-            ? "bg-primary text-white hover:bg-primary"
-            : "border border-primary text-black hover:bg-white/70"
-        }
-      `}
-            >
-              {status.label}
-            </button>
-          ))}
+        <div className="mt-10 bg-red">
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-4 overflow-x-auto sm:overflow-x-visible mx-auto px-4">
+            {propertyStatus.map((status) => (
+              <button
+                key={status.key}
+                onClick={() => setActiveStatus(status.key)}
+                className={`flex-shrink-0 px-6 py-3 text-lg text-center transition whitespace-nowrap
+          ${
+            activeStatus === status.key
+              ? "bg-primary text-white hover:bg-primary"
+              : "border border-primary text-black hover:bg-white/70"
+          }
+        `}
+              >
+                {status.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">

@@ -39,7 +39,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${oxanium.variable} ${inika.variable} antialiased`}
       >
         <Navbar/>
-        {/* <MobileNavbar /> */}
+        <MobileNavbar />
         {children}
         <Footer />
       </body>

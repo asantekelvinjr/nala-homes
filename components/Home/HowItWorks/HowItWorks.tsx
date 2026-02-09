@@ -9,11 +9,11 @@ const HowItWorks = () => {
       <div className="w-[87%] mx-auto">
         {/* Heading */}
         <div className="flex flex-col items-center mx-auto">
-          <h3 className="uppercase text-red-accent leading-[35px]">
+          <h3 className="uppercase text-[13px] lg:text-[16px] text-red-accent leading-[35px]">
             -- How It Works --
           </h3>
 
-          <h2 className="text-3xl sm:text-3xl md:text-[32px] lg:text-3xl font-bold text-center text-primary leading-[50px] max-w-[450px]">
+          <h2 className="text-2xl lg:text-3xl font-bold text-primary text-center lg:text-left leading-[40px] lg:leading-[50px] max-w-full  lg:max-w-[400px]">
             How We Guide You Through Our Simple Process
           </h2>
         </div>

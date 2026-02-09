@@ -30,29 +30,50 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex justify-center">
-          <div className="relative w-full max-w-md mt-5">
-          <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
-          <input
-            type="text"
-            placeholder="Search By Location ..."
-            className="bg-white text-[#928D8D] border py-4 pl-14 pr-30 rounded-full"
-          />
+<div className="flex justify-center md:justify-start">
+  <div className="relative w-full max-w-md mt-5">
+    <FaSearch
+      className="
+        absolute
+        left-5 sm:left-12 md:left-4
+        top-1/2
+        -translate-y-1/2
+        text-gray-400
+      "
+    />
 
-          <button
-            className="
-      absolute left-83 top-1/2 -translate-y-1/2
-      bg-primary text-white 
-      w-10 h-10 
-      rounded-full 
-      flex items-center justify-center
-      hover:bg-blue-600
-    "
-          >
-            <FaArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-        </div>
+    <input
+      type="text"
+      placeholder="Search By Location ..."
+      className="
+        bg-white text-[#928D8D]
+        border
+        py-4
+        pl-10 md:pl-14
+        pr-16 md:pr-20
+        rounded-full
+        w-full
+      "
+    />
+
+    <button
+      className="
+        absolute
+        right-4
+        top-1/2
+        -translate-y-1/2
+        bg-primary text-white
+        w-10 h-10
+        rounded-full
+        flex items-center justify-center
+        hover:bg-blue-600
+      "
+    >
+      <FaArrowRight className="w-5 h-5" />
+    </button>
+  </div>
+</div>
+
       </div>
     </section>
   );

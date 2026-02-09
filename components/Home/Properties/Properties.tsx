@@ -32,11 +32,11 @@ const Properties = () => {
       <div className="w-[87%] mx-auto min-h-screen flex flex-col">
         {/* Heading */}
         <div className="flex flex-col items-center justify-self-center mx-auto">
-          <h3 className="uppercase text-red-accent leading-[35px] ">
+          <h3 className="uppercase text-[13px] lg:text-[16px] text-red-accent leading-[35px] ">
             -- LATEST PROPERTIES --
           </h3>
 
-          <h2 className="text-3xl font-bold text-center text-primary leading-[50px] max-w-[500px]">
+          <h2 className="text-2xl lg:text-3xl font-bold text-primary text-center lg:text-left leading-[40px] lg:leading-[50px] max-w-full  lg:max-w-[400px]">
             Explore The Newest Properties On The Market
           </h2>
         </div>

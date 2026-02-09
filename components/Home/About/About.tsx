@@ -8,7 +8,7 @@ const About = () => {
         {/* Top */}
         <div className="flex flex-col-reverse lg:flex-row justify-center gap-30">
           {/* Left */}
-          <div className="flex gap-4 h-fit overflow-hidden">
+          <div className="flex gap-4 justify-center lg:justify-start h-fit overflow-hidden">
             {/* Vertical Image */}
             <div>
               <Image
@@ -50,16 +50,16 @@ const About = () => {
           <div className="flex flex-col gap-10">
             {/* Heading */}
             <div className="flex flex-col items-center lg:items-start">
-              <h3 className="uppercase text-red-accent leading-[35px] ">
+              <h3 className="uppercase text-[13px] lg:text-[16px] text-red-accent leading-[35px] ">
                 -- About us --
               </h3>
 
-              <h2 className="text-3xl font-bold text-primary leading-[50px] max-w-full  lg:max-w-[400px]">
+              <h2 className="text-2xl lg:text-3xl font-bold text-primary text-center lg:text-left leading-[40px] lg:leading-[50px] max-w-full  lg:max-w-[400px]">
                 Built On Trust, Driven By Excellence
               </h2>
             </div>
 
-            <div className="max-w-fit lg:max-w-[510px] text-[24px] text-text leading-[45px] ">
+            <div className="max-w-fit lg:max-w-[510px] text-[18px] lg:text-[24px] text-text leading-[45px] ">
               With 20+ years of experience, we make buying, selling, and
               investing in real estate simple and seamless, guiding you every
               step of the way.
@@ -67,19 +67,19 @@ const About = () => {
 
             <div className="flex justify-center lg:justify-start mt-10 gap-20">
               <div className="flex  flex-col items-center lg:items-start">
-                <h3 className="text-5xl text-primary font-semibold title">
+                <h3 className="text-4xl lg:text-5xl text-primary font-semibold title">
                   2.5k +
                 </h3>
 
-                <p className="mt-2 text-xl">Homes delivered</p>
+                <p className="mt-2 text-[18px] lg:text-xl text-center lg:text-left">Homes delivered</p>
               </div>
 
               <div className="flex  flex-col items-center lg:items-start">
-                <h3 className="text-5xl text-primary font-semibold title">
+                <h3 className="text-4xl lg:text-5xl text-primary font-semibold title">
                   50 +
                 </h3>
 
-                <p className="mt-2 text-xl">Expert agents</p>
+                <p className="mt-2 text-[18px] lg:text-xl text-center lg:text-left">Expert agents</p>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const About = () => {
             <h2 className="font-semibold text-lg sm:text-xl md:text-2xl xl:text-[26px] mt-1 text-center">
               Quality Service
             </h2>
-            <p className="text-sm sm:text-base md:text-[16px] xl:text-[18px] text-text font-normal max-w-[250px] leading-[28px] sm:leading-[32px] md:leading-[33px] xl:leading-[35px] text-center">
+            <p className="text-[16px]  md:text-[18px] xl:text-[18px] text-text font-normal max-w-[250px] leading-[28px] sm:leading-[32px] md:leading-[33px] xl:leading-[35px] text-center">
               Exceptional service for all your real estate needs.
             </p>
           </div>
@@ -128,7 +128,7 @@ const About = () => {
             <h2 className="font-semibold text-lg sm:text-xl md:text-2xl xl:text-[26px] mt-1 text-center">
               Expert Guidance
             </h2>
-            <p className="text-sm sm:text-base md:text-[16px] xl:text-[18px] text-text font-normal max-w-[250px] leading-[28px] sm:leading-[32px] md:leading-[33px] xl:leading-[35px] text-center">
+            <p className="text-[16px] md:text-[18px] xl:text-[18px] text-text font-normal max-w-[250px] leading-[28px] sm:leading-[32px] md:leading-[33px] xl:leading-[35px] text-center">
               Trusted expertise to guide your property decisions.
             </p>
           </div>
@@ -151,7 +151,7 @@ const About = () => {
             <h2 className="font-semibold text-lg sm:text-xl md:text-2xl xl:text-[26px] mt-1 text-center">
               Tailored Solution
             </h2>
-            <p className="text-sm sm:text-base md:text-[16px] xl:text-[18px] text-text font-normal max-w-[250px] leading-[28px] sm:leading-[32px] md:leading-[33px] xl:leading-[35px] text-center">
+            <p className="text-[16px] md:text-[18px] xl:text-[18px] text-text font-normal max-w-[250px] leading-[28px] sm:leading-[32px] md:leading-[33px] xl:leading-[35px] text-center">
               Exceptional service for all your real estate needs.
             </p>
           </div>

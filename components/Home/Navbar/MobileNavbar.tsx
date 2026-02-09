@@ -1,42 +1,86 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const sections = ["Home", "About", "Properties", "Agents", "Contact"];
 
 const MobileNavbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 lg:hidden">
       {/* Top Bar */}
-      <div className=" backdrop-blur-md bg-white/10  border-white/20
-                      shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-        <div className="w-[90%] mx-auto flex justify-between items-center py-4
-                      ">
-        <div className="flex items-center gap-3 text-white text-xl font-semibold">
-          <Image src="/images/nala logo.png" width={30} height={30} alt="Nala Homes logo" />
-          <span>Nala Homes</span>
-        </div>
-
-        {/* Hamburger */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="text-white focus:outline-none"
-          aria-label="Toggle menu"
+      <div
+        className={`backdrop-blur-md transition-colors duration-300
+      border-b border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+      ${scrolled ? 'bg-black/30' : 'bg-none'}`}
+      >
+        <div
+          className="w-[90%] mx-auto flex justify-between items-center py-4
+                      "
         >
-          {open ? (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
-      </div>
+          <div className="flex items-center gap-3 text-white text-xl font-semibold">
+            <Image
+              src="/images/nala logo.png"
+              width={30}
+              height={30}
+              alt="Nala Homes logo"
+            />
+            <span>Nala Homes</span>
+          </div>
+
+          {/* Hamburger */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-white focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {open ? (
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Overlay */}

@@ -6,15 +6,15 @@ const About = () => {
     <section className="min-h-screen bg-off-white pb-20">
       <div className="flex flex-col  w-[87%] mx-auto pt-25">
         {/* Top */}
-        <div className="flex flex-col-reverse lg:flex-row justify-center gap-30">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-30">
           {/* Left */}
-          <div className="flex gap-4 justify-center lg:justify-start h-fit overflow-hidden">
+          <div className="flex items-center gap-4 justify-center lg:justify-start h-fit overflow-hidden">
             {/* Vertical Image */}
             <div>
               <Image
                 src="/images/bento-vertical.png"
                 alt="left-bento image"
-                width={300}
+                width={300} 
                 height={100}
                 className="rounded-xl "
               />

@@ -18,8 +18,8 @@ const FAQs: React.FC = () => {
   };
 
   return (
-    <section className="bg-off-white pt-25 ">
-      <div className="w-[87%] mx-auto min-h-screen">
+    <section className="bg-off-white pt-25 pb-20">
+      <div className="w-[87%] mx-auto h-fit">
         {/* Heading */}
         <div className="flex flex-col items-center mx-auto">
           <h3 className="uppercase text-red-accent leading-[35px]">
@@ -42,7 +42,7 @@ const FAQs: React.FC = () => {
                 onClick={() => toggleFAQ(item.id)}
                 className="flex items-center justify-between px-6 sm:px-12 py-6 w-full"
               >
-                <h3 className="font-semibold max-w-[250px] lg:max-w-full text-[16px] sm:text-[21px] text-left">
+                <h3 className="font-semibold max-w-[230px] md:max-w-[510px] lg:max-w-full text-[16px] sm:text-[21px] text-left">
                   {item.question}
                 </h3>
                 <div className="text-2xl text-primary">

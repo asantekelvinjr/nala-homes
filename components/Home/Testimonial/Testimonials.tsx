@@ -11,7 +11,7 @@ const Testimonials = () => {
             -- TESTIMONIALS --
           </h3>
 
-          <h2 className="text-2xl lg:text-3xl font-bold text-primary text-center lg:text-left leading-[40px] lg:leading-[50px] max-w-full  lg:max-w-[400px]">
+          <h2 className="text-2xl lg:text-3xl font-bold text-primary text-center  leading-[40px] lg:leading-[50px] max-w-full  lg:max-w-[400px]">
             What Our Customers Say About Us
           </h2>
         </div>

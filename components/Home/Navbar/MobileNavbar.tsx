@@ -92,7 +92,7 @@ const MobileNavbar = () => {
 
       {/* Side Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-3/5 bg-[#0A0A0A] text-white z-50
+        className={`fixed top-0 left-0 h-full w-3/5 bg-footer-bg text-white z-50
           border-r border-white/20 shadow-xl
           transform transition-transform duration-300 ease-in-out
           ${open ? "translate-x-0" : "-translate-x-full"}`}

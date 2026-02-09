@@ -42,7 +42,7 @@ const FAQs: React.FC = () => {
                 onClick={() => toggleFAQ(item.id)}
                 className="flex items-center justify-between px-6 sm:px-12 py-6 w-full"
               >
-                <h3 className="font-semibold text-[18px] sm:text-[21px] text-left">
+                <h3 className="font-semibold max-w-[250px] lg:max-w-full text-[16px] sm:text-[21px] text-left">
                   {item.question}
                 </h3>
                 <div className="text-2xl text-primary">

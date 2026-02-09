@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="w-[90%] flex flex-col gap-2  justify-center relative z-10 mx-auto">
         {/* Heading */}
         <div>
-          <h1 className="text-white  text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[52px] 2xl:text-[52px] leading-16 max-w-[600px] text-center lg:text-left  lg:max-w-[690px] font-semibold">
+          <h1 className="text-white  text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[52px] 2xl:text-[52px] leading-13.5 lg:leading-16 max-w-[600px] text-center lg:text-left  lg:max-w-[690px] font-semibold">
             Find Your Dream Property in Minutes
           </h1>
         </div>

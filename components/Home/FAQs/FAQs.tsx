@@ -18,7 +18,7 @@ const FAQs: React.FC = () => {
   };
 
   return (
-    <section className="bg-off-white pt-25 pb-20">
+    <section className="bg-off-white pt-25 ">
       <div className="w-[87%] mx-auto min-h-screen">
         {/* Heading */}
         <div className="flex flex-col items-center mx-auto">

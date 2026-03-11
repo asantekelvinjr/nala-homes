@@ -50,12 +50,16 @@ const Hero = () => {
               placeholder="Search By Location ..."
               className="
         bg-white text-[#928D8D]
-        border
+        border 
         py-4
         pl-10 md:pl-14
         pr-16 md:pr-20
         rounded-full
         w-full
+         focus:outline-none
+        focus:ring-2
+    focus:ring-primary
+    focus:border-primary
       "
             />
 

@@ -3,7 +3,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <section className="bg-off-white pt-25 pb-20">
+    <section className="bg-off-white pt-25 pb-20" id="testimonials">
       <div className="w-[87%] mx-auto min-h-screen ">
         {/* Heading */}
         <div className="flex flex-col items-center justify-self-center mx-auto">

@@ -28,7 +28,7 @@ const Properties = () => {
         );
 
   return (
-    <section className="bg-alt-bg pt-25 pb-20">
+    <section className="bg-alt-bg pt-25 pb-20" id="properties">
       <div className="w-[87%] mx-auto min-h-screen flex flex-col">
         {/* Heading */}
         <div className="flex flex-col items-center justify-self-center mx-auto">
@@ -64,7 +64,7 @@ const Properties = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-          {filteredProperties.map((property) => (
+          {filteredProperties.slice(0, 6).map((property) => (
             //    Card
             <div key={property.id} className="shadow-md">
               {/* Image */}
@@ -125,13 +125,15 @@ const Properties = () => {
                   <div className=" flex justify-between items-center mt-3">
                     {/* Agent image and name */}
                     <div className=" flex items-center gap-3">
-                      <Image
-                        src={property.agentImage}
-                        width={35}
-                        height={35}
-                        alt="agent"
-                        className="rounded-full"
-                      />
+                      <div className="w-[35px] h-[35px] rounded-full overflow-hidden">
+                        <Image
+                          src={property.agentImage}
+                          width={35}
+                          height={35}
+                          alt="agent"
+                          className="object-cover"
+                        />
+                      </div>
 
                       <span className="font-sans font-medium ">
                         {property.agentName}{" "}

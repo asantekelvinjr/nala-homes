@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
+  const [activeLink, setActiveLink] = useState("home")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,12 +19,22 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const linkClass = (link : string) =>
+    `text-[18px] transition ${
+      activeLink === link
+        ? "text-primary"
+        : "text-white hover:text-primary"
+    }`
+
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 justify-center hidden lg:flex
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 justify-center hidden lg:flex
       backdrop-blur-md transition-colors duration-300
       border-b border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.12)]
-      ${scrolled ? 'bg-black/30' : 'bg-none'}`}>
+      ${scrolled ? 'bg-black/30' : 'bg-none'}`}
+    >
       <div className='w-[80%] mx-auto py-7 flex justify-between items-center'>
+        
         {/* Logo */}
         <div className='flex items-center gap-4'>
           <Image src="/images/nala logo.png" width={30} height={30} alt='logo'/>
@@ -32,10 +43,37 @@ const Navbar = () => {
 
         {/* Links */}
         <div className='flex gap-8 font-normal'>
-          <a href="#" className='text-primary text-[18px]'>Home</a>
-          <a href="#" className='text-white text-[18px]'>About</a>
-          <a href="#" className='text-white text-[18px]'>Properties</a>
-          <a href="#" className='text-white text-[18px]'>Agents</a>
+          <a
+            href="#"
+            onClick={() => setActiveLink("home")}
+            className={linkClass("home")}
+          >
+            Home
+          </a>
+
+          <a
+            href="#about"
+            onClick={() => setActiveLink("about")}
+            className={linkClass("about")}
+          >
+            About
+          </a>
+
+          <a
+            href="#properties"
+            onClick={() => setActiveLink("properties")}
+            className={linkClass("properties")}
+          >
+            Properties
+          </a>
+
+          <a
+            href="#testimonials"
+            onClick={() => setActiveLink("testimonials")}
+            className={linkClass("testimonials")}
+          >
+            Testimonials
+          </a>
         </div>
 
         {/* Contact Button */}
@@ -44,6 +82,7 @@ const Navbar = () => {
             Contact
           </button>
         </div>
+
       </div>
     </nav>
   )

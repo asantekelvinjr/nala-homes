@@ -50,7 +50,7 @@ const HowItWorks = () => {
 
               {/* Bottom: Arrow */}
               <div className="flex justify-end mt-4">
-                <div className="flex justify-center bg-primary w-8 h-8 items-center rounded-full">
+                <div className="flex justify-center bg-primary  hover:bg-blue-600 cursor-pointer w-8 h-8 items-center rounded-full">
                   <ArrowRightIcon className="w-4 h-4 text-white" />
                 </div>
               </div>
@@ -60,7 +60,7 @@ const HowItWorks = () => {
 
         {/* Book Now Button */}
         <div className="flex items-center justify-center mt-10 sm:mt-16">
-          <button className="bg-primary py-3 px-7 rounded-full text-white text-sm sm:text-base">
+          <button className="bg-primary  hover:bg-blue-600 cursor-pointer py-3 px-7 rounded-full text-white text-sm sm:text-base">
             Book Now
           </button>
         </div>

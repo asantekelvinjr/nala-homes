@@ -4,7 +4,7 @@ import React from "react";
 const Testimonials = () => {
   return (
     <section className="bg-off-white pt-25 pb-20" id="testimonials">
-      <div className="w-[87%] mx-auto min-h-screen ">
+      <div className="w-[87%] md:w-[95%] lg:w-[85%] mx-auto min-h-screen ">
         {/* Heading */}
         <div className="flex flex-col items-center justify-self-center mx-auto">
           <h3 className="uppercase text-[13px] lg:text-[16px] text-red-accent leading-[35px] ">
@@ -17,7 +17,7 @@ const Testimonials = () => {
         </div>
 
         {/* Card */}
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex justify-center ">
           <TestimonialCard />
         </div>
       </div>

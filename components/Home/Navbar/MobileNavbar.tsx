@@ -28,7 +28,7 @@ const MobileNavbar = () => {
       <div
         className={`backdrop-blur-md transition-colors duration-300
       border-b border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.12)]
-      ${scrolled ? 'bg-black/30' : 'bg-none'}`}
+      ${scrolled ? "bg-black/30" : "bg-none"}`}
       >
         <div
           className="w-[90%] mx-auto flex justify-between items-center py-4
@@ -52,7 +52,7 @@ const MobileNavbar = () => {
           >
             {open ? (
               <svg
-                className="w-8 h-8"
+                className="w-8 h-8 "
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

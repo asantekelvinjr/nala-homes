@@ -23,7 +23,7 @@ const Navbar = () => {
     `text-[18px] transition ${
       activeLink === link
         ? "text-primary"
-        : "text-white hover:text-primary"
+        : "text-white hover:text-blue-600"
     }`
 
   return (
@@ -78,7 +78,7 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <div>
-          <button className='bg-primary text-white px-6 py-2 rounded-full hover:brightness-110 transition'>
+          <button className='bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:bg-blue-600 transition'>
             Contact
           </button>
         </div>

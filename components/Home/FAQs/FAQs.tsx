@@ -45,7 +45,7 @@ const FAQs: React.FC = () => {
                 <h3 className="font-semibold max-w-[230px] md:max-w-[510px] lg:max-w-full text-[16px] sm:text-[21px] text-left">
                   {item.question}
                 </h3>
-                <div className="text-2xl text-primary">
+                <div className="text-2xl text-primary cursor-pointer hover:text-blue-600">
                   {openId === item.id ? <FaMinus /> : <FaPlus />}
                 </div>
               </button>

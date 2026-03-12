@@ -7,6 +7,9 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolid } from "@heroicons/react/24/solid";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Properties = () => {
   const [isFav, setIsFav] = useState(false);
@@ -26,6 +29,14 @@ const Properties = () => {
       : propertyDetails.filter(
           (property) => property.category === activeStatus,
         );
+
+  useEffect(() => {
+    Aos.init({
+      duration: 800, // animation speed
+      easing: "ease-out",
+      once: true, // animate only once
+    });
+  }, []);
 
   return (
     <section className="bg-alt-bg pt-25 pb-20" id="properties">
@@ -64,9 +75,14 @@ const Properties = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-          {filteredProperties.slice(0, 6).map((property) => (
+          {filteredProperties.slice(0, 6).map((property, index) => (
             //    Card
-            <div key={property.id} className="shadow-md">
+            <div
+              key={property.id}
+              className="shadow-md"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               {/* Image */}
               <div className="relative w-full aspect-4/2">
                 <Image

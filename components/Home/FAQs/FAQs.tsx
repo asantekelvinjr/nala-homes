@@ -2,6 +2,9 @@
 import { faqs } from "@/constants";
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
 
 // Define the FAQ type
 interface FAQ {
@@ -16,6 +19,14 @@ const FAQs: React.FC = () => {
   const toggleFAQ = (id: number) => {
     setOpenId(openId === id ? null : id); // Close if already open, otherwise open
   };
+
+    useEffect(() => {
+      Aos.init({
+        duration: 800, // animation speed
+        easing: "ease-out",
+        once: true, // animate only once
+      });
+    }, []);
 
   return (
     <section className="bg-off-white pt-25 pb-20">
@@ -32,17 +43,20 @@ const FAQs: React.FC = () => {
         </div>
 
         {/* FAQ Cards */}
-        <div className="flex flex-col gap-8 justify-center items-center mt-10 sm:mt-15">
+        <div className="flex flex-col gap-8 justify-center items-center mt-10 sm:mt-15"
+        data-aos="fade-right"
+        >
           {faqs.map((item: FAQ) => (
             <div
               key={item.id}
+              
               className="flex flex-col w-full max-w-[750px] bg-[#FAFAFA] shadow-lg border border-black/10 border-t-0 rounded-3xl"
             >
               <button
                 onClick={() => toggleFAQ(item.id)}
                 className="flex items-center justify-between px-6 sm:px-12 py-6 w-full"
               >
-                <h3 className="font-semibold max-w-[230px] md:max-w-[510px] lg:max-w-full text-[16px] sm:text-[21px] text-left">
+                <h3 className="font-semibold max-w-[350px] md:max-w-[510px] lg:max-w-full text-[16px] sm:text-[21px] text-left">
                   {item.question}
                 </h3>
                 <div className="text-2xl text-primary cursor-pointer hover:text-blue-600">

@@ -1,9 +1,21 @@
+"use client"
 import { howItWorks } from "@/constants";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React from "react";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
+
 
 const HowItWorks = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 800, // animation speed
+      easing: "ease-out",
+      once: true, // animate only once
+    });
+  }, []);
   return (
     <section className="bg-alt-bg pt-25 pb-20">
       <div className="w-[87%] mx-auto">
@@ -20,9 +32,11 @@ const HowItWorks = () => {
 
         {/* Cards */}
         <div className="flex flex-wrap justify-center gap-6 mt-10">
-          {howItWorks.map((items) => (
+          {howItWorks.map((items,index) => (
             <div
               key={items.id}
+              data-aos="fade-up"
+  data-aos-delay={index * 100}
               className="flex flex-col justify-between bg-[#FAFAFA] px-6 py-8 sm:px-8 sm:py-9 rounded-2xl shadow-lg min-w-[250px] max-w-[320px] flex-1"
             >
               {/* Top: Icon and Number */}

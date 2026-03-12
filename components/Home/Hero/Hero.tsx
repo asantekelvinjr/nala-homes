@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { FaArrowRight, FaSearch } from "react-icons/fa";
-import { propertyDetails } from "@/constants"; // adjust path if needed
+import { propertyDetails } from "@/constants";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
   const [inputValue, setInputValue] = useState("");
@@ -13,7 +15,7 @@ const Hero = () => {
   // Memoize unique locations to prevent infinite re-renders
   const locations = useMemo(
     () => Array.from(new Set(propertyDetails.map((p) => p.location))),
-    []
+    [],
   );
 
   // Update suggestions when inputValue changes
@@ -25,7 +27,7 @@ const Hero = () => {
     }
 
     const filtered = locations.filter((loc) =>
-      loc.toLowerCase().includes(inputValue.toLowerCase())
+      loc.toLowerCase().includes(inputValue.toLowerCase()),
     );
 
     setSuggestions(filtered);
@@ -51,15 +53,25 @@ const Hero = () => {
     setShowSuggestions(false);
   };
 
+  useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: "ease-in-out",
+  });
+}, []);
+
   return (
-    <section
-      className="relative h-screen w-screen bg-[url('/images/hero-img.jpg')] bg-cover bg-center bg-no-repeat flex"
-    >
+    <section className="relative h-screen w-screen bg-[url('/images/hero-img.jpg')] bg-cover bg-center bg-no-repeat flex">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="w-[90%] flex flex-col gap-2 justify-center relative z-10 mx-auto">
+      <div
+        className="w-[90%] flex flex-col gap-2 justify-center relative z-10 mx-auto"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top"
+      >
         {/* Heading */}
         <div className="flex mx-auto">
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[52px] 2xl:text-[52px] leading-13.5 lg:leading-16 max-w-[600px] text-center lg:text-left lg:max-w-[690px] font-semibold">
@@ -70,8 +82,8 @@ const Hero = () => {
         {/* Paragraph */}
         <div className="mt-3 flex mx-auto">
           <p className="text-[20px] text-white max-w-[450px] text-center lg:text-left lg:max-w-[680px]">
-            Explore a wide range of homes, apartments, and lands tailored to your
-            lifestyle.
+            Explore a wide range of homes, apartments, and lands tailored to
+            your lifestyle.
           </p>
         </div>
 

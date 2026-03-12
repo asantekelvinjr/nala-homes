@@ -1,20 +1,35 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <section className="min-h-screen bg-off-white pb-20" id="about">
       <div className="flex flex-col  w-[87%] mx-auto pt-25">
         {/* Top */}
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-30">
           {/* Left */}
-          <div className="flex items-center gap-4 justify-center lg:justify-start h-fit overflow-hidden">
+          <div
+            className="flex items-center gap-4 justify-center lg:justify-start h-fit overflow-hidden"
+            data-aos="fade-right"
+            data-aos-anchor-placement="top-center"
+          >
             {/* Vertical Image */}
             <div>
               <Image
                 src="/images/bento-vertical.png"
                 alt="left-bento image"
-                width={300} 
+                width={300}
                 height={100}
                 className="rounded-xl "
               />
@@ -47,7 +62,12 @@ const About = () => {
           </div>
 
           {/* Right */}
-          <div className="flex flex-col gap-10">
+          <div
+            className="flex flex-col gap-10"
+            data-aos="fade-left"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="100"
+          >
             {/* Heading */}
             <div className="flex flex-col items-center lg:items-start">
               <h3 className="uppercase text-[13px] lg:text-[16px] text-red-accent leading-[35px] ">
@@ -71,7 +91,9 @@ const About = () => {
                   2.5k +
                 </h3>
 
-                <p className="mt-2 text-[18px] lg:text-xl text-center lg:text-left">Homes delivered</p>
+                <p className="mt-2 text-[18px] lg:text-xl text-center lg:text-left">
+                  Homes delivered
+                </p>
               </div>
 
               <div className="flex  flex-col items-center lg:items-start">
@@ -79,7 +101,9 @@ const About = () => {
                   50 +
                 </h3>
 
-                <p className="mt-2 text-[18px] lg:text-xl text-center lg:text-left">Expert agents</p>
+                <p className="mt-2 text-[18px] lg:text-xl text-center lg:text-left">
+                  Expert agents
+                </p>
               </div>
             </div>
           </div>
@@ -88,7 +112,11 @@ const About = () => {
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-10 sm:gap-20 items-center justify-center mt-12 md:mt-20 lg:mt-30">
           {/* Card 1 */}
-          <div className="flex flex-col gap-4 w-fit">
+          <div
+            className="flex flex-col gap-4 w-fit"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div
               className="flex items-center justify-center rounded-full bg-primary 
                     w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-[100px] xl:h-[100px] 
@@ -111,7 +139,11 @@ const About = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="flex flex-col gap-4 w-fit">
+          <div
+            className="flex flex-col gap-4 w-fit"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <div
               className="flex items-center justify-center rounded-full bg-primary 
                     w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-[100px] xl:h-[100px] 
@@ -134,7 +166,11 @@ const About = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="flex flex-col gap-4 w-fit">
+          <div
+            className="flex flex-col gap-4 w-fit"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div
               className="flex items-center justify-center rounded-full bg-primary 
                     w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-[100px] xl:h-[100px] 

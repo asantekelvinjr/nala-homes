@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { BiSolidStar } from "react-icons/bi";
 
+
 const TestimonialCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.2.0",
     "aos": "^2.3.4",
     "baseline-browser-mapping": "^2.10.0",
+    "framer-motion": "^12.35.2",
     "next": "^16.1.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
